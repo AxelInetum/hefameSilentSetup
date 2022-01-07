@@ -19,7 +19,7 @@ namespace msiAplication.ClassProcesSilentMsi
             //necesito el msi antiguo para desinstalarlo 
             Process process = new Process();
             process.StartInfo.FileName = "msiexec.exe";
-            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\" + VersionMsi +".msi";
+            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\SilenceSetup.msi";
             process.StartInfo.Verb = "runas";
             process.Start();
             process.WaitForExit();

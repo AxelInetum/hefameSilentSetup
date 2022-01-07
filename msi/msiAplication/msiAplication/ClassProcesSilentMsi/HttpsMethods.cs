@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +14,7 @@ namespace msiAplication.ClassProcesSilentMsi
     {
         private string httpRemotServer = "";
         private WebClient client;
+        private CertificateWebClient certificateWebClient;
         private string localPathNewVersionMsi;
         private string newMsiVersion;
 
@@ -19,37 +22,29 @@ namespace msiAplication.ClassProcesSilentMsi
         {
             httpRemotServer = url;
             newMsiVersion = newVersionMsi;
+            X509Certificate2 cert = new X509Certificate2();
+            ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(ValidateServerCertificate);
+            certificateWebClient = new CertificateWebClient(cert);
             client = new WebClient();
-            localPathNewVersionMsi = @"C:\Users\x40369pi\Desktop\LastVersion\" + newMsiVersion + ".msi";
+            localPathNewVersionMsi = @"C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\" + newMsiVersion + ".msi";
         }
 
         public void HttpsDownloadNewVersionMsi()
         {
-           client.DownloadFile(httpRemotServer, localPathNewVersionMsi);
+            using (certificateWebClient)
+            {
+                client.DownloadFile(httpRemotServer, localPathNewVersionMsi);
 
-
-
-
+            }
         }
         public bool HttpsCorrectDownloafileNewVersionMsi()
         {
             return File.Exists(localPathNewVersionMsi);
         }
 
-        public static bool ValidateHttpsServerCertificate(object sender)
+        public static bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         {
             return true;
-            /*
-            if (sslPolicyErrors == SslPolicyErrors.None)
-                return true;
-            else
-            {
-                if (System.Windows.Forms.MessageBox.Show("The server certificate is not valid.\nAccept?", "Certificate Validation", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                    return true;
-                else
-                    return false;
-            }
-            */
         }
     }
 }

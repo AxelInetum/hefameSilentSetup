@@ -30,8 +30,8 @@ namespace msiAplication.ClassProcesSilentMsi
                 if (HttpsMethods.HttpsCorrectDownloafileNewVersionMsi())
                 {
                     ProcessSilentMsiMethods = new SilentMsiMethods();
-                    ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi("HefameSilentSetup");
-                    ProcessSilentMsiMethods.InstallNewLocalAplicationMsi("HefameSilentSetup");
+                    ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi(LastVersionDatas.ThelastVersion.ToString());
+                    ProcessSilentMsiMethods.InstallNewLocalAplicationMsi(LastVersionDatas.ThelastVersion.ToString());
                     Environment.Exit(0);
                     /*ProcessSilentMsiMethods.OpenNewApplicationMsi();*/
                 }
