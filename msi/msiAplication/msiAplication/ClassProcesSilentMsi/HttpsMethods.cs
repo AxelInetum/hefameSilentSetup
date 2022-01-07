@@ -34,7 +34,6 @@ namespace msiAplication.ClassProcesSilentMsi
             using (certificateWebClient)
             {
                 client.DownloadFile(httpRemotServer, localPathNewVersionMsi);
-
             }
         }
         public bool HttpsCorrectDownloafileNewVersionMsi()

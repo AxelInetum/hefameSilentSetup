@@ -19,7 +19,7 @@ namespace msiAplication.ClassProcesSilentMsi
             //necesito el msi antiguo para desinstalarlo 
             Process process = new Process();
             process.StartInfo.FileName = "msiexec.exe";
-            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\SilenceSetup.msi";
+            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\"+VersionMsi+".msi";
             process.StartInfo.Verb = "runas";
             process.Start();
             process.WaitForExit();
@@ -39,7 +39,7 @@ namespace msiAplication.ClassProcesSilentMsi
         public void OpenNewApplicationMsi()
         {
             Process p = new Process();
-            p.StartInfo.FileName = @"C:\Program Files (x86)\Default Company Name\SilenceSetup\HefameApp\msiAplication.exe";
+            p.StartInfo.FileName = @"C:\Program Files (x86)\HefameSilentSetup\HefameSilentSetup\HefameApp\msiAplication.exe";
             p.Start();
         }
     }

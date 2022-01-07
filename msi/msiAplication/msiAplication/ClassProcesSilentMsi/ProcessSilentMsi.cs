@@ -32,8 +32,9 @@ namespace msiAplication.ClassProcesSilentMsi
                     ProcessSilentMsiMethods = new SilentMsiMethods();
                     ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi(LastVersionDatas.ThelastVersion.ToString());
                     ProcessSilentMsiMethods.InstallNewLocalAplicationMsi(LastVersionDatas.ThelastVersion.ToString());
+                    ProcessSilentMsiMethods.OpenNewApplicationMsi();
                     Environment.Exit(0);
-                    /*ProcessSilentMsiMethods.OpenNewApplicationMsi();*/
+                  
                 }
             }
         }

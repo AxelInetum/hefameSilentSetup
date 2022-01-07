@@ -15,25 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_4C21B50140294B92B8C68F62090DC121"
+        "MsmKey" = "8:_09A711D7B3804D2381E5587DF6C1E76C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7587DF972F204FBA9A23C31CDB4855DA"
+        "MsmKey" = "8:_11F9F26CA6994F66A031CB3D84586156"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8DBC07FC5D174A5E9F4B01C9A3A407C2"
+        "MsmKey" = "8:_2E6A72FA4B7B462B9463B365BC8D5D17"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_9622F8B4765447959915DCAC168A2C0A"
+        "MsmKey" = "8:_74D9B7A9E3D643D1BC90E0D92EC1C216"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,13 +45,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B2CCFDED26C749479D5818B4D3258E22"
+        "MsmKey" = "8:_D25872C620AA453683E8752900685526"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FD4BB1E68DC84923868250A6C6CBF200"
+        "MsmKey" = "8:_E2CEDD1473254EFE94B64C59737381E3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -142,7 +142,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C21B50140294B92B8C68F62090DC121"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_09A711D7B3804D2381E5587DF6C1E76C"
             {
             "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.pdb"
             "TargetName" = "8:msiAplication.pdb"
@@ -162,10 +162,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7587DF972F204FBA9A23C31CDB4855DA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_11F9F26CA6994F66A031CB3D84586156"
             {
-            "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.exe"
-            "TargetName" = "8:msiAplication.exe"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:msiAplication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_11F9F26CA6994F66A031CB3D84586156"
+                    {
+                    "Name" = "8:msiAplication.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_A0A2A4B05EE24CB4AEB1D51BE983FABB"
             "Condition" = "8:"
@@ -182,7 +193,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8DBC07FC5D174A5E9F4B01C9A3A407C2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2E6A72FA4B7B462B9463B365BC8D5D17"
             {
             "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.deps.json"
             "TargetName" = "8:msiAplication.deps.json"
@@ -202,7 +213,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9622F8B4765447959915DCAC168A2C0A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_74D9B7A9E3D643D1BC90E0D92EC1C216"
             {
             "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.runtimeconfig.dev.json"
             "TargetName" = "8:msiAplication.runtimeconfig.dev.json"
@@ -242,21 +253,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B2CCFDED26C749479D5818B4D3258E22"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D25872C620AA453683E8752900685526"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:msiAplication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_B2CCFDED26C749479D5818B4D3258E22"
-                    {
-                    "Name" = "8:msiAplication.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.exe"
+            "TargetName" = "8:msiAplication.exe"
             "Tag" = "8:"
             "Folder" = "8:_A0A2A4B05EE24CB4AEB1D51BE983FABB"
             "Condition" = "8:"
@@ -273,7 +273,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD4BB1E68DC84923868250A6C6CBF200"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2CEDD1473254EFE94B64C59737381E3"
             {
             "SourcePath" = "8:..\\msiAplication\\bin\\Debug\\net5.0\\msiAplication.runtimeconfig.json"
             "TargetName" = "8:msiAplication.runtimeconfig.json"
@@ -361,7 +361,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:HefameSilentSetup"
         "ProductCode" = "8:{D8FBE500-5803-447E-8540-1178B06D7521}"
-        "PackageCode" = "8:{E64EE35E-3FAB-4CAC-869C-3A3862F24C5B}"
+        "PackageCode" = "8:{EEEA292A-CA23-4524-9D82-CB8E2F8E2546}"
         "UpgradeCode" = "8:{E5073115-DB58-4C19-8CFA-DCF47A69485D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -481,29 +481,29 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3E7B3C7409934F338E856AAF07383647"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7332D26AB9A94FB09E0B388FE2DDAC27"
             {
-            "Name" = "8:hefame"
+            "Name" = "8:HefameVersionNueva.exe"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_7587DF972F204FBA9A23C31CDB4855DA"
+            "Target" = "8:_D25872C620AA453683E8752900685526"
             "Folder" = "8:_BD0C113C13194F14A6228321BDE44488"
             "WorkingFolder" = "8:_A0A2A4B05EE24CB4AEB1D51BE983FABB"
-            "Icon" = "8:"
+            "Icon" = "8:_9ACCF425AAD54DD3B50FD8DE424B28F3"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4EFB806BB60A4530982F2F8DA22680DB"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_ED03684A7BA344B6B803D5E72EA32545"
             {
-            "Name" = "8:Hefame"
+            "Name" = "8:HefameVersionNueva"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_7587DF972F204FBA9A23C31CDB4855DA"
+            "Target" = "8:_D25872C620AA453683E8752900685526"
             "Folder" = "8:_397049CD37124DBE8B1615402408CE74"
             "WorkingFolder" = "8:_A0A2A4B05EE24CB4AEB1D51BE983FABB"
             "Icon" = "8:"
