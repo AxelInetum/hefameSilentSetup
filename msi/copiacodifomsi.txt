@@ -1,0 +1,51 @@
+using System;
+using System.Diagnostics;
+using msiAplication.ClassProcesSilentMsi;
+
+namespace msiAplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Versionactual = 0;
+            ProcessSilentMsiMethods ProcessSilentMsiMethods = new ProcessSilentMsiMethods();
+
+            if (Versionactual < TheLastVersion())
+            {
+                //bajamos la version del msi del https 
+                downloadVersionFromHttps();
+                //comprobamos que se ha descargado correctamente comprobando que localmente existe el fichero 
+                if (ExisThelastversionInLocalMachine())
+                {
+                    Console.WriteLine("hefame conector perfecto");
+                    Console.Read();
+                    //desinstalamos el aplicativo a traves de su numero de msi 
+
+                    ProcessSilentMsiMethods.ExecuteBatch();
+
+
+                    //cerramos el aplicativo actual (en este caso el aplicativo de consola
+                    Environment.Exit(0);
+                    /*
+                    ProcessSilentMsiMethods.DesinstallAplicationMsi();
+                    ProcessSilentMsiMethods.OpenAplicationMsi();
+                    */
+                }
+            }
+
+        }
+        static int TheLastVersion()
+        {
+            return 1;
+        }
+        static void downloadVersionFromHttps()
+        {
+
+        }
+        static bool ExisThelastversionInLocalMachine()
+        {
+            return true;
+        }
+    }
+}
