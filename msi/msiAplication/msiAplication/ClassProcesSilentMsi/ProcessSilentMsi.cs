@@ -11,7 +11,7 @@ namespace msiAplication.ClassProcesSilentMsi
         public static void InitProcessSilentMsi()
         {
             //version actual del aplicativo 
-            int currentVersion = 0;
+            int currentVersion = 1;
             //objeto para obtener los metodos para instalar y desinstalar el msi de manera silenciosa 
             SilentMsiMethods ProcessSilentMsiMethods;
             //objeto para obtener los metodos para acceso al servidor https (descargar de la version nueva del msi)

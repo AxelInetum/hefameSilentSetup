@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r/Db1IfTU+ducSO/lLVicf8gnbXy+otGcX858yx14wHvF2RtyT0ow/Pwwx/JzU1CsTLcGARy3RXWt4veGpNDTQ==",
+  "dgSpecHash": "XIv/Zpw4a98/75TckqycWpvE8fFMO3dL6dcGBsLYxZz/KMovOz1cDhV3mKmr62gsdqnRAidnbQGMfjn3UZBMmw==",
   "success": true,
-  "projectFilePath": "C:\\proyectos\\ControlSetup\\msi\\msiAplication\\msiAplication\\msiAplication.csproj",
+  "projectFilePath": "C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\msiAplication\\msiAplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

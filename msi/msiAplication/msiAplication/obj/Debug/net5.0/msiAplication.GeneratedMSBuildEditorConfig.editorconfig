@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = msiAplication
-build_property.ProjectDir = C:\proyectos\ControlSetup\msi\msiAplication\msiAplication\
+build_property.ProjectDir = C:\proyectos\ControlSetup\SilentMsi\hefameSilentSetup\msi\msiAplication\msiAplication\
