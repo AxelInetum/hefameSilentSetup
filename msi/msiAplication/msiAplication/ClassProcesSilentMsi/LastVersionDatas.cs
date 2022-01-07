@@ -13,8 +13,8 @@ namespace msiAplication.ClassProcesSilentMsi
 
         public LastVersionDatas()
         {
-            url = "https://localhost:443/axel.exe";
-            ThelastVersion = 0;
+            url = "https://localhost:443/1.msi";
+            ThelastVersion = 1;
         }
     }
 

@@ -10,8 +10,6 @@ namespace msiAplication.ClassProcesSilentMsi
 {
     public class SilentMsiMethods
     {
-
-
         public SilentMsiMethods()
         {
 
@@ -21,7 +19,7 @@ namespace msiAplication.ClassProcesSilentMsi
             //necesito el msi antiguo para desinstalarlo 
             Process process = new Process();
             process.StartInfo.FileName = "msiexec.exe";
-            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\msi\\msiAplication\\OldVersionMsi\\" + VersionMsi +".msi";
+            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\" + VersionMsi +".msi";
             process.StartInfo.Verb = "runas";
             process.Start();
             process.WaitForExit();
@@ -31,7 +29,7 @@ namespace msiAplication.ClassProcesSilentMsi
         {
             Process process = new Process();
             process.StartInfo.FileName = "msiexec.exe";
-            process.StartInfo.Arguments = string.Format("/i {0} " + " /quiet /qn /log  {1}", @"C:\proyectos\ControlSetup\msi\msiAplication\NewVersionMsi\" + VersionMsi + ".msi", @"C:\proyectos\ControlSetup\install.log");
+            process.StartInfo.Arguments = string.Format("/i {0} " + " /quiet /qn /log  {1}", @"C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\" + VersionMsi + ".msi", @"C:\proyectos\ControlSetup\SilentMsi\hefameSilentSetup\msi\msiAplication\install.log");
             process.StartInfo.Verb = "runas";
             process.Start();
             process.WaitForExit();
