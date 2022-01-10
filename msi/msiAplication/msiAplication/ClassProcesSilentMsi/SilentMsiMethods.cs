@@ -10,30 +10,35 @@ namespace msiAplication.ClassProcesSilentMsi
 {
     public class SilentMsiMethods
     {
-        public SilentMsiMethods()
-        {
+        private string versionMsi;
 
+        public SilentMsiMethods(string versionMsi)
+        {
+            this.versionMsi = versionMsi;
         }
-        public void DesinstallOldLocalAplicationMsi(string VersionMsi)
+        public void DesinstallOldLocalAplicationMsi()
         {
             //necesito el msi antiguo para desinstalarlo 
             Process process = new Process();
             process.StartInfo.FileName = "msiexec.exe";
-            process.StartInfo.Arguments = "/qn /x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\"+VersionMsi+".msi";
-            process.StartInfo.Verb = "runas";
+            process.StartInfo.Arguments = "/x C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\" + this.versionMsi + ".msi" +
+                " /qn /log " + @"C:\proyectos\ControlSetup\SilentMsi\hefameSilentSetup\msi\msiAplication\Log\SilentDesInstall_" + DateTime.Now.Year.ToString() + "_" +
+                DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + ".log";
             process.Start();
             process.WaitForExit();
         }
 
-        public void InstallNewLocalAplicationMsi(string VersionMsi)
+        public void InstallNewLocalAplicationMsi()
         {
             Process process = new Process();
             process.StartInfo.FileName = "msiexec.exe";
-            process.StartInfo.Arguments = string.Format("/i {0} " + " /quiet /qn /log  {1}", @"C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\" + VersionMsi + ".msi", @"C:\proyectos\ControlSetup\SilentMsi\hefameSilentSetup\msi\msiAplication\install.log");
+            process.StartInfo.Arguments = "/i C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\" + this.versionMsi + ".msi" +
+                " /quiet /qn /log " + @"C:\proyectos\ControlSetup\SilentMsi\hefameSilentSetup\msi\msiAplication\Log\SilentInstall_" + DateTime.Now.Year.ToString() + "_" +
+                DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + ".log";
+
             process.StartInfo.Verb = "runas";
             process.Start();
             process.WaitForExit();
-
         }
 
         public void OpenNewApplicationMsi()

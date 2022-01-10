@@ -13,7 +13,7 @@ namespace msiAplication.ClassProcesSilentMsi
 
         public LastVersionDatas()
         {
-            url = "https://localhost:443/1.msi";
+            url = "https://localhost:443/HefameSetup.msi";
             ThelastVersion = "1.1.2";
         }
     }
