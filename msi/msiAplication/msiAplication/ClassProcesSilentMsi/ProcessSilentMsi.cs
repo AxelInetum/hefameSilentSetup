@@ -11,18 +11,22 @@ namespace msiAplication.ClassProcesSilentMsi
         public static void InitProcessSilentMsi()
         {
             //version actual del aplicativo 
-            int currentVersion = 0;
+            string currentVersion = "1.1";
             //objeto para obtener los metodos para instalar y desinstalar el msi de manera silenciosa 
             SilentMsiMethods ProcessSilentMsiMethods;
             //objeto para obtener los metodos para acceso al servidor https (descargar de la version nueva del msi)
             HttpsMethods HttpsMethods;
             //representa el web service que nos devolvera un objeto con la url del https y la ultima version guardada en base de datos
-            LastVersionDatas LastVersionDatas = new LastVersionDatas();
+            LastVersionDatas lastVersionDatas = new LastVersionDatas();
+            //cojemos la version actual y la ultima version , pasamos los dos a objeto version
+            Version currentversion = new Version(currentVersion);
+            Version theLastVersionHttps = new Version(lastVersionDatas.ThelastVersion);
+
             //comparamos la version actual con la remota (si la version actual es inferior generamos el proceso)
-            if (currentVersion < LastVersionDatas.ThelastVersion)
+            if (currentversion.CompareTo(theLastVersionHttps) < 0)
             {
                 //creamos el objeto para llamar el metodo que descargar la nueva version del msi a nuestra maquina local 
-                HttpsMethods = new HttpsMethods(LastVersionDatas.url, LastVersionDatas.ThelastVersion.ToString());
+                HttpsMethods = new HttpsMethods(lastVersionDatas.url, lastVersionDatas.ThelastVersion);
                 //bajamos la version del msi del https 
                 HttpsMethods.HttpsDownloadNewVersionMsi();
 
@@ -30,8 +34,8 @@ namespace msiAplication.ClassProcesSilentMsi
                 if (HttpsMethods.HttpsCorrectDownloafileNewVersionMsi())
                 {
                     ProcessSilentMsiMethods = new SilentMsiMethods();
-                    ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi(LastVersionDatas.ThelastVersion.ToString());
-                    ProcessSilentMsiMethods.InstallNewLocalAplicationMsi(LastVersionDatas.ThelastVersion.ToString());
+                    ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi(lastVersionDatas.ThelastVersion);
+                    ProcessSilentMsiMethods.InstallNewLocalAplicationMsi(lastVersionDatas.ThelastVersion);
                     ProcessSilentMsiMethods.OpenNewApplicationMsi();
                     Environment.Exit(0);
                   

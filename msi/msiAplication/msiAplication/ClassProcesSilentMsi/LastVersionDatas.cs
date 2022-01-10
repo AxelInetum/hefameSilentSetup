@@ -9,12 +9,12 @@ namespace msiAplication.ClassProcesSilentMsi
     public class LastVersionDatas
     {
         public string url;
-        public int ThelastVersion;
+        public string ThelastVersion;
 
         public LastVersionDatas()
         {
             url = "https://localhost:443/1.msi";
-            ThelastVersion = 1;
+            ThelastVersion = "1.1.2";
         }
     }
 
