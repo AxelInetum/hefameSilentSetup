@@ -38,18 +38,25 @@ namespace msiAplication.ClassProcesSilentMsi
                     //comprobamos que se ha descargado correctamente comprobando que localmente existe el fichero 
                     if (HttpsMethods.HttpsCorrectDownloafileNewVersionMsi())
                     {
+                        //incializamos con el nombre del fichero por defecto
                         ProcessSilentMsiMethods = new SilentMsiMethods("HefameSetup");
+                        //desinstalamos la versión antigua con su instalador propio  
                         ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi();
+                        //instalamos la versión nueva descargada del https
                         ProcessSilentMsiMethods.InstallNewLocalAplicationMsi();
+                        //movemos el instalador nuevo descargado a la carpeta de version antigua
                         MsiAplicationUtilities.MoveMsiOldErVersionFolder();
+                        //limpiamos la version descargada https de la carpeta de nueva version
                         MsiAplicationUtilities.DeleteNewVersionMsi();
-                        ProcessSilentMsiMethods.OpenNewApplicationMsi();
+                        ProcessSilentMsiMethods.OpenNewApplicationMsi();   
+                        //cerramoa el aplicativo al cerrarse el updater detectara que se ha cerrado y lo reabrira con la version nueva instalada 
                         Environment.Exit(0);
                     }
                 }
             }
             catch (Exception ex)
             {
+                //exportación de loggers si falla culquier metodo
                 _loggerMethodObject.CreateLog(ex.Message.ToString());
             }
         }
