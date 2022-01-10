@@ -51,11 +51,11 @@ namespace msiAplication.ClassProcesSilentMsi.LoggerMethods
 
         private void AddDatasFile(StreamWriter tw, string exception)
         {
-            tw.WriteLine("No se ha podido realizar el proceso de actualización con la siguiente excepción: ");
+            tw.WriteLine("No se ha podido realizar el proceso de actualización por la siguiente excepción: ");
             tw.WriteLine(exception);
             tw.WriteLine("Con fecha y hora :" + DateTime.Now.ToString());
-            tw.WriteLine();
-            tw.WriteLine();
+            tw.WriteLine("\r\n");
+            tw.WriteLine("\r\n");
         }  
         
     }
