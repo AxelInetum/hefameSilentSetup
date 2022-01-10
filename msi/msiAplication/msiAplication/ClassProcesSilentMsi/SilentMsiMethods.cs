@@ -35,7 +35,6 @@ namespace msiAplication.ClassProcesSilentMsi
             process.StartInfo.Arguments = "/i C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\" + this.versionMsi + ".msi" +
                 " /quiet /qn /log " + @"C:\proyectos\ControlSetup\SilentMsi\hefameSilentSetup\msi\msiAplication\Log\SilentInstall_" + DateTime.Now.Year.ToString() + "_" +
                 DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + ".log";
-
             process.StartInfo.Verb = "runas";
             process.Start();
             process.WaitForExit();

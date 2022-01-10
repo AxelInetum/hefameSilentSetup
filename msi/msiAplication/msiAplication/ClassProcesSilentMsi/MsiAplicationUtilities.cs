@@ -21,8 +21,8 @@ namespace msiAplication.ClassProcesSilentMsi
 
         public void MoveMsiOldErVersionFolder()
         {
-            string origin = "@C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\HefameSetup.msi";
-            string destiny = "@C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\HefameSetup.msi";
+            string origin = "C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\HefameSetup.msi";
+            string destiny = "C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\HefameSetup.msi";
             File.Copy(origin, destiny, true);
         }
     }
