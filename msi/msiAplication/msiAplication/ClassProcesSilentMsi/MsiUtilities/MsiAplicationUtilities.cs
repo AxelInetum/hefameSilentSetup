@@ -25,5 +25,11 @@ namespace msiAplication.ClassProcesSilentMsi
             string destiny = "C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\OldVersionMsi\\HefameSetup.msi";
             File.Copy(origin, destiny, true);
         }
+
+        public void DeleteNewVersionMsi()
+        {
+            string origin = "C:\\proyectos\\ControlSetup\\SilentMsi\\hefameSilentSetup\\msi\\msiAplication\\NewVersionMsi\\HefameSetup.msi";
+            File.Delete(origin);
+        }
     }
 }

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using msiAplication.ClassProcesSilentMsi.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using msiAplication.ClassProcesSilentMsi.LoggerMethods;
 
 namespace msiAplication.ClassProcesSilentMsi
 {
@@ -10,8 +12,9 @@ namespace msiAplication.ClassProcesSilentMsi
     {
         public static void InitProcessSilentMsi()
         {
+            Ilogger _loggerMethodObject = new LoggerMethod();
             try
-            {
+            {        
                 //version actual del aplicativo 
                 string currentVersion = "1.1";
                 //objeto para obtener los metodos para instalar y desinstalar el msi de manera silenciosa 
@@ -39,6 +42,7 @@ namespace msiAplication.ClassProcesSilentMsi
                         ProcessSilentMsiMethods.DesinstallOldLocalAplicationMsi();
                         ProcessSilentMsiMethods.InstallNewLocalAplicationMsi();
                         MsiAplicationUtilities.MoveMsiOldErVersionFolder();
+                        MsiAplicationUtilities.DeleteNewVersionMsi();
                         ProcessSilentMsiMethods.OpenNewApplicationMsi();
                         Environment.Exit(0);
                     }
@@ -46,7 +50,7 @@ namespace msiAplication.ClassProcesSilentMsi
             }
             catch (Exception ex)
             {
-                //log
+                _loggerMethodObject.CreateLog(ex.Message.ToString());
             }
         }
     }
